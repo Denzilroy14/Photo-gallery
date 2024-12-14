@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Homepage</title>
+    </head>
+    <style>
+        .images{
+            width:230px;
+            height:250px;
+            display:inline;
+        }
+    </style>
+    <body>
+        <h1>Download images for free</h1>
+        {%for data in data%}
+        <a href="{{url_for('download',filename=data)}}">Download</a>
+        <img class="images" src="{{url_for('static',filename='images/'+data)}}">
+        {%endfor%}
+    </body>
+</html>
